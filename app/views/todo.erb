@@ -10,7 +10,7 @@
 
 <section class='todo-container'>
   <div>
-    <form action="/todos/<%= @todo.id %>" method="POST" class="form">
+    <form action="/<%= @todo.id %>" method="POST" class="form">
       <!-- because he cannot put a put method on our form -->
       <input type='hidden' name='_method' value='put'>
       <label>New Title:</label>
@@ -18,7 +18,7 @@
       <label>New Date:</label>
       <input type="date" name="date"  value="<%= @todo.date %>"/>
       <div class='btn-container2'>
-        <a   class='btn' href='/todos'>︎Back</a>
+        <a   class='btn' href='/'>︎Back</a>
         <input  class="btn-2" type='submit' value='save changes'>
       </div>
     </form>

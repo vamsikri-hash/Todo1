@@ -13,37 +13,37 @@
  end
  
 
-get "/todos" do
+get "/" do
   @todos =Post.all
   @message=session.delete(:message)
   erb :todos
 end
 
-get "/todos/:id" do
+get "/:id" do
   @todo = Post.find(params[:id].to_i)
   erb :todo
 end
 
-post "/todos" do
+post "/" do
 
   @todo=Post.create(title:params[:title],date:params[:date])
   session[:message]="sucessfully added todo:#{params[:title]}"
 
-redirect "/todos"
+redirect "/"
 end
 
-put "/todos/:id" do
+put "/:id" do
   @todo=Post.find(params[:id].to_i)
   @todo.update(title:params[:title])
   @todo.update(date:params[:date])
   @todo.save
-  redirect "/todos"
+  redirect "/"
 end
 
-delete "/todos/:id" do
+delete "/:id" do
   @todo=Post.find(params[:id].to_i)
   @todo.delete
-  redirect "/todos"
+  redirect "/"
 end
 
 end
