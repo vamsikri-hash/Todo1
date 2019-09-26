@@ -1,0 +1,43 @@
+<!-- todos.erb -->
+<!-- views/todos.erb -->
+<header>
+  <div id='header-left'>
+    <h1>Todo App</h1>
+    <h1><%= @message %></h1>
+  </div>
+  <div>
+    <form action="/todos" method="POST" class="form">
+      <label >Title</label>
+      <input  type="text" name="title">
+      <label>Deadline</label>
+      <input type="date" name="date">
+      <input class="btn-style" type="submit">
+    </form>
+  </div>
+</header>
+
+<section class='todos-container'>
+  <div class='gallery'>
+    <% @todos.each do |key| %>
+    <div class='btn-container'>
+      <h3 >
+      	<div class="make">
+
+            <a href="/todos/<%= key.id %>" class="todo-box"><%= key.title %></a>
+            <!--Display deadline only if date has been selected -->
+
+            <span class="todo-box"><span class="dead_style">Deadline:</span><%= key.date %></span>
+
+
+        </div>
+      </h3>
+      <!-- Display delete button if title is not empty -->
+
+      <form method='POST' action='/todos/<%= key.id %>'>
+          <input type='hidden' name='_method' value='delete'>
+          <input class="btn-style2" type='submit' value='Delete'>
+        </form>
+    </div>
+    <% end %>
+  </div>
+</section>
