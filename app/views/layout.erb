@@ -2,6 +2,153 @@
 <html>
   <head>
   <link rel='stylesheet' type ="text/css" href='style.css'>
+  <style>
+  	body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color:#F8EFBA;
+}
+a{
+  text-decoration: none;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+#header-left h1 {
+  margin: 0;
+  font-size: 45px;
+  text-align: center;
+  color: #1B9CFC;
+}
+#header-left h3
+{
+  font-size: 35px;
+  margin-left: 20%;
+}
+
+p {
+  font-size: 14px;
+}
+
+header {
+  font-family: sans-serif;
+}
+
+h3 {
+  max-width: max-content;
+}
+
+h3 form {
+  float: right;
+  margin-left: 0.5rem;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+
+}
+
+.btn-container {
+  margin-top: 0.5rem;
+  margin-left: 20%;
+
+}
+.todo-box
+{
+
+  font-size: 30px;
+
+}
+.dead_style{
+margin-left: 20px;
+}
+.btn
+{
+  border: 2px #eb4d4b solid;
+  padding: 5px 5px;
+  width: 100px;
+  border-radius: 5px;
+  background-color:#eb4d4b;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+}
+.btn-container2
+{
+  padding-top: 30px;
+  margin-top: 0.5rem;
+  margin-left: 20%;
+}
+.btn-style
+{
+  border: 2px #2ecc71 solid;
+  padding: 5px 5px;
+  width: 100px;
+  border-radius: 25px;
+  margin-left:20%;
+  background-color: #2ecc71;
+  cursor: pointer;
+  color: #2f3640;
+  font-weight: bold;
+  margin-top: 18px;
+}
+.btn-style2
+{
+  border: 2px #eb4d4b solid;
+  padding: 5px 5px;
+  width: 100px;
+  border-radius: 5px;
+  background-color:#eb4d4b;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+
+}
+.form
+{
+  padding-top: 50px;
+  margin-left: 200px;
+}
+.form label{
+display: flex;
+font-size: 25px;
+font-weight: 600;
+margin-left: 20%;
+padding: 15px 15px ;
+color: #0c2461;
+}
+.form input[type="text"],input[type="date"]
+{
+  background:#636e72;
+    display: block;
+    margin-left: 20%;
+    text-align: center;
+    border: 2px solid #636e72;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 25px;
+    outline: none;
+    transition: .25ms;
+    color: white;
+    font-weight: 700;
+}
+.btn-2
+{
+  border: 2px #2ecc71 solid;
+  padding: 5px 5px;
+  width: 100px;
+  border-radius: 5px;
+  background-color:#2ecc71;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+  </style>
   </head>
   <body>
     <%= yield %>
