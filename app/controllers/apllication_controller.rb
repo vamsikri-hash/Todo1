@@ -7,7 +7,7 @@
 
 #enabling sessions 
  configure do 
-   set :publi_folder, 'public'
+  # set :public_folder, 'public'
   set :views, 'app/views'
   enable :sessions
  end
