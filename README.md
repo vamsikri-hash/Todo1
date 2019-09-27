@@ -1,1 +1,2 @@
-Simple Sinatra Todo App
+Simple Sinatra Todo App 
+fields : title,deadline
