@@ -1,5 +1,6 @@
 ## Simple Sinatra Todo App 
-It is  sinatra Todo app built to learn concepts of database tables,Controllers and to Learn about Sqlite3
+It is  sinatra Todo app built to learn concepts of database tables,Controllers and to Learn about Sqlite3.
+
 A base page conatins two fields
 
 - Title
